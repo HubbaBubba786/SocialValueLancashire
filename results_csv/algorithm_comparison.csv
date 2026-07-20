@@ -1,0 +1,13 @@
+algorithm,k,silhouette
+KMeans,2,0.294
+Agglomerative,2,0.294
+GMM,2,0.294
+KMeans,3,0.259
+Agglomerative,3,0.262
+GMM,3,0.259
+KMeans,4,0.253
+Agglomerative,4,0.253
+GMM,4,0.139
+KMeans,5,0.177
+Agglomerative,5,0.188
+GMM,5,0.14
