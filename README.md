@@ -42,27 +42,27 @@ they need to run in order the first time through.
 2. **Settings** : file paths, the 14 local authorities of Lancashire, forecast
    thresholds, plot styling
 3. **Helper code** : name-cleaning and sheet-loading helpers
-4. **1 - loading workbook** : opens the Excel file, loads all 9 sheets
-5. **2 - tidy sheets** : reshapes each sheet into one common
+**1 - loading workbook** : opens the Excel file, loads all 9 sheets
+**2 - tidy sheets** : reshapes each sheet into one common
    `(local_authority, year, indicator, value)` format and stacks them into one
    long panel
-6. **3 - cross sectional sheets** : builds the crime target (single snapshot,
+**3 - cross sectional sheets** : builds the crime target (single snapshot,
    not a time series) and the IMD deprivation features
-7. **4 - trajectory features** : fits a trend line per local authority per
+**4 - trajectory features** : fits a trend line per local authority per
    indicator, giving a `level` (mean) and `trend` (slope) feature for each
-8. **5 - forecasting** : for indicators with enough LA/year coverage, forecasts
+**5 - forecasting** : for indicators with enough LA/year coverage, forecasts
    3 years ahead with a 95% interval
-9. **6 - assemble base table** : merges everything into one row per local
+**6 - assemble base table** : merges everything into one row per local
    authority, reports feature completeness, imputes missing values, checks for
    highly correlated (redundant) features
-10. **7 - clustering** : compares KMeans/Agglomerative/GMM across several k
+**7 - clustering** : compares KMeans/Agglomerative/GMM across several k
     values, picks the best by silhouette score, checks cluster stability via
     bootstrap resampling, and checks whether the clusters actually track crime
     levels
-11. **8 - predictive modelling** : Random Forest with Leave-One-Out CV,
+**8 - predictive modelling** : Random Forest with Leave-One-Out CV,
     comparing raw features vs PCA-reduced features, with feature importance
     (RF and SHAP) projected back onto the original indicators
-12. **9 - figures** : generates all output charts
+**9 - figures** : generates all output charts
 
 ## Outputs
 
