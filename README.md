@@ -1,8 +1,8 @@
-# Lancashire Social Value Analysis
+# Lancashire Social Value Analysis 
 
 An analytical framework evaluating social value indicators across Lancashire's 14
 local authorities, featuring:
-  - Trend Forecasting: Time-series tracking paired with 3-year predictive horizon
+  - Trend Forecasting: Time-series tracking paired with 3 year predictive horizon
   - Clustering: Descriptive grouping that maps regional profiles
   - Predictive Modeling: A Random Forest architecture using socioeconomic indicators to predict recorded crime rates
 
