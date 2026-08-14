@@ -64,30 +64,30 @@ order the first time through. Make sure `SocialValueData.xlsx` and the
    Fingertips indicator/age-band lookup, forecast thresholds, plot styling
 3. **Helper code** : name-cleaning, sheet-loading, CSV-loading, and
    Fingertips time-period-to-year helpers
-- **1 - loading workbook** : opens the Excel file and loads the 8 sheets under
+- **Loading workbook** : opens the Excel file and loads the 8 sheets under
    1000 rows, then loads the 6 full CSV exports from `datasets/`
-- **2 - tidy sheets** : reshapes each source into one common
+- **Tidy sheets** : reshapes each source into one common
    `(local_authority, year, indicator, value)` format and stacks them into one
    long panel - 20 longitudinal indicators in total (see below)
-- **3 - cross sectional sheets** : builds the crime target (single snapshot,
+- **Cross sectional sheets** : builds the crime target (single snapshot,
    not a time series), the IMD deprivation features, and the B&B
    households / temporary accommodation / duty-decision features (also
    single-snapshot)
-- **4 - trajectory features** : fits a trend line per local authority per
+- **Trajectory features** : fits a trend line per local authority per
    indicator, giving a `level` (mean) and `trend` (slope) feature for each
-- **5 - forecasting** : for indicators with enough LA/year coverage, forecasts
+- **Forecasting** : for indicators with enough LA/year coverage, forecasts
    3 years ahead with a 95% interval
-- **6 - assemble base table** : merges everything into one row per local
+- **Assemble base table** : merges everything into one row per local
    authority, reports feature completeness, imputes missing values, checks for
    highly correlated (redundant) features
-- **7 - clustering** : compares KMeans/Agglomerative/GMM across several k
+- **Clustering** : compares KMeans/Agglomerative/GMM across several k
     values, picks the best by silhouette score, checks cluster stability via
     bootstrap resampling, and checks whether the clusters actually track crime
     levels
-- **8 - predictive modelling** : Random Forest with Leave-One-Out CV,
+- **Predictive modelling** : Random Forest with Leave-One-Out CV,
     comparing raw features vs PCA-reduced features, with feature importance
     (RF and SHAP) projected back onto the original indicators
-- **9 - figures** : generates all output charts
+- **Figures** : generates all output charts
 
 ### Longitudinal indicators (level + trend each)
 
