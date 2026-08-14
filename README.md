@@ -59,10 +59,10 @@ order the first time through. Make sure `SocialValueData.xlsx` and the
 
 ## What each cell does
 
-1. **Imports** : pandas/numpy/sklearn/matplotlib, optional shap
-2. **Settings** : file paths, the 14 local authorities of Lancashire, the
+**Imports** : pandas/numpy/sklearn/matplotlib, optional shap
+**Settings** : file paths, the 14 local authorities of Lancashire, the
    Fingertips indicator/age-band lookup, forecast thresholds, plot styling
-3. **Helper code** : name-cleaning, sheet-loading, CSV-loading, and
+**Helper code** : name-cleaning, sheet-loading, CSV-loading, and
    Fingertips time-period-to-year helpers
 - **Loading workbook** : opens the Excel file and loads the 8 sheets under
    1000 rows, then loads the 6 full CSV exports from `datasets/`
